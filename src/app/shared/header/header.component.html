@@ -1,0 +1,49 @@
+<div class="header header-inverse" id="myTopnav">
+  <a href="www.stjosephstechnology.ac.in" class="logo"><img src="../assets/Media/sjitLogo.png" width="60px" height="60px"></a>
+  <div class="header-right" id="myTopContent">
+    <a routerLink="/"routerLinkActive="active">
+      <button mat-button [matMenuTriggerFor]="menu">Home</button>
+      <mat-menu #menu="matMenu"></mat-menu>
+    </a>
+
+    <a >
+    <button mat-button [matMenuTriggerFor]="marks">Marks</button>
+    <mat-menu #marks="matMenu">
+     <a routerLink="/marks"> <button mat-menu-item >Update Marks</button></a>
+     <a routerLink="/viewmarks"><button mat-menu-item>View Marks</button></a>
+     <a routerLink="/enddate"><button mat-menu-item>End Data Entry</button></a>
+    </mat-menu>
+  </a>
+   
+  <a>
+    <button mat-button [matMenuTriggerFor]="univ">University Results</button>
+    <mat-menu #univ="matMenu">
+     <a routerLink="/viewresult"> <button mat-menu-item >View Result</button></a>
+     <a routerLink="/updateresult"><button mat-menu-item>Update Result</button></a>
+    </mat-menu>
+  </a>
+  
+  <a>
+    <button mat-button [matMenuTriggerFor]="student">Student</button>
+    <mat-menu #student="matMenu">
+     <a routerLink="/modeltype"> <button mat-menu-item >Update Model Type</button></a>
+     <a routerLink="/registerno"><button mat-menu-item>Update Register No</button></a>
+     <a routerLink="/bonusremoval"><button mat-menu-item>Bonus Assignment</button></a>
+     <a routerLink="/studentno"><button mat-menu-item>Student No Display</button></a>
+    </mat-menu>
+  </a>
+    <a routerLink="/modellab"> <button mat-button [matMenuTriggerFor]="">Model lab</button></a>
+    <a routerLink="/circular"><button mat-button [matMenuTriggerFor]="">Circular</button></a>
+    <a routerLink="/events"><button mat-button [matMenuTriggerFor]="">Events</button></a>
+    <a routerLink="/upload"><button mat-button [matMenuTriggerFor]="">Exam Uploads</button></a>
+    <a>
+      <button mat-button [matMenuTriggerFor]="report">Report Generation</button>
+      <mat-menu #report="matMenu">
+       <a routerLink="/analysis"> <button mat-menu-item >Result Analysis</button></a>
+       <a routerLink="/markreport"><button mat-menu-item>Mark Report</button></a>
+       <a routerLink="/bonus"><button mat-menu-item>Bonus Report</button></a>
+      </mat-menu>
+    </a>
+  </div>
+  <a href="javascript:void(0);" style="font-size:15px;" class="icon" (click)="onBtnClick()">&#9776;</a>
+</div>
